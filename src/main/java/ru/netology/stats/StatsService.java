@@ -11,8 +11,14 @@ public class StatsService {
 
         return summaAll;
     }
-    public long mediumSales(long[] sales, long summaAll) {
+
+    public long mediumSales(long[] sales) {
         long medSales = 0;
+        long summaAll = 0;
+
+        for (int i = 0; i < sales.length; i++) {
+            summaAll = summaAll + sales[i];
+        }
 
         medSales = summaAll / (sales.length);
 
@@ -42,8 +48,17 @@ public class StatsService {
 
         return minMonth + 1;
     }
-    public int minMediumSales(long[] sales, long medSales) {
+
+    public int minMediumSales(long[] sales) {
         int minMedMonth = 0;
+        long medSales = 0;
+        long summaAll = 0;
+
+        for (int i = 0; i < sales.length; i++) {
+            summaAll = summaAll + sales[i];
+        }
+
+        medSales = summaAll / (sales.length);
 
         for (int i = 0; i < sales.length; i++) {
             if (sales[i] < medSales) {
@@ -53,8 +68,17 @@ public class StatsService {
 
         return minMedMonth;
     }
-    public int maxMediumSales(long[] sales, long medSales) {
+
+    public int maxMediumSales(long[] sales) {
         int maxMedMonth = 0;
+        long medSales = 0;
+        long summaAll = 0;
+
+        for (int i = 0; i < sales.length; i++) {
+            summaAll = summaAll + sales[i];
+        }
+
+        medSales = summaAll / (sales.length);
 
         for (int i = 0; i < sales.length; i++) {
             if (sales[i] > medSales) {
@@ -64,4 +88,4 @@ public class StatsService {
 
         return maxMedMonth;
     }
-    }
+}

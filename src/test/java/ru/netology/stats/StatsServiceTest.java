@@ -21,8 +21,7 @@ public class StatsServiceTest {
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         long expected = 15;
 
-        long summaAll = service.summSales(sales);
-        long actual = service.mediumSales(sales, summaAll);
+        long actual = service.mediumSales(sales);
         Assertions.assertEquals(expected, actual);
     }
 
@@ -52,9 +51,7 @@ public class StatsServiceTest {
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         long expected = 5;
 
-        long summaAll = service.summSales(sales);
-        long medSales = service.mediumSales(sales, summaAll);
-        long actual = service.minMediumSales(sales, medSales);
+        long actual = service.minMediumSales(sales);
         Assertions.assertEquals(expected, actual);
     }
 
@@ -64,9 +61,7 @@ public class StatsServiceTest {
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         long expected = 5;
 
-        long summaAll = service.summSales(sales);
-        long medSales = service.mediumSales(sales, summaAll);
-        long actual = service.maxMediumSales(sales, medSales);
+        long actual = service.maxMediumSales(sales);
         Assertions.assertEquals(expected, actual);
     }
 }
